@@ -5,86 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      button {
+        margin: 10px 0;
+        padding: 5px 15px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Sơ đồ 3 khối</h1>
-    <p>*INPUT: Cho ngày, tháng, năm</p>
+    <h1>SƠ ĐỒ 3 KHỐI</h1>
+    <p>*INPUT: Nhập giá trị 3 số nguyên</p>
     <p>*PROCESS:</p>
     <ol>
-      <li>Input: Nhập vào ngày, tháng, năm</li>
+      <li>Lấy Input: Lấy giá trị 3 số nguyên</li>
       <li>
-        Công thức: <br />
-        *CÔNG THỨC TÍNH NGÀY TIẾP THEO <br />
-        switch (month) {<br />
-        case 4:<br />
-        case 6:<br />
-        case 9:<br />
-        case 11:<br />
-        time = 30;<br />
-        break;<br />
-        case 2:<br />
-        time = 28 + (year % 400 === 0);<br />
-        break;<br />
-        default:<br />
-        time = 31;<br />
-        }<br />
-        day = (day % time) + 1;<br />
-        if (day == 1 && month <= 12) {<br />
-        month = (month % 12) + 1;<br />
-        }<br />
-        if (month == 1 && day == 1) {<br />
-        year++;<br />
-        }<br />
-        tomorrow = day + "/" + month + "/" + year;<br />
-        }<br />
-        *CÔNG THỨC TÍNH NGÀY HÔM TRƯỚC<br />
-        function yesterday() {<br />
-        var day = document.getElementById("day").value * 1;<br />
-        var month = document.getElementById("month").value * 1;<br />
-        var year = document.getElementById("year").value * 1;<br />
-        var time;<br />
-        var yesterday = "";<br />
-        switch (month) {<br />
-        case 5:<br />
-        case 7:<br />
-        case 10:<br />
-        case 12:<br />
-        time = 30;<br />
-        break;<br />
-        case 3:<br />
-        if (year % 400 == 0) {<br />
-        time = 29;<br />
+        Công thứ<!--  -->:
+        <br />
+        if (a < b && a < c) { <br />
+        if (b < c) {<br />
+        console.log(a, b, c);<br />
         } else {<br />
-        time = 28;<br />
+        console.log(a, c, b);<br />
         }<br />
-        break;<br />
-        default:<br />
-        time = 31;<br />
-        }<br />
-        if (day == 1 && month > 1) {<br />
-        day = time<br />
-        month--;<br />
-        } else if (month == 1 && day == 1) {<br />
-        day = time<br />
-        month = 12;<br />
-        year--;<br />
+        } else if (b < c && b < a) {<br />
+        if (a < c) {<br />
+        console.log(b, a, c);<br />
         } else {<br />
-        day--;<br />
-        } <br />
-        yesterday = day + "/" + month + "/" + year;<br />
+        console.log(b, c, a);<br />
+        }<br />
+        } else if (c < b && c < a) {<br />
+        if (a < b) {<br />
+        console.log(c, a, b);<br />
+        } else {<br />
+        console.log(c, b, a);<br />
+        }<br />
+        }<br />
       </li>
       <li>In kết quả</li>
     </ol>
-    <p>*OUTPUT: Ngày tiếp theo và ngày hôm trước</p>
-    <hr>
-    <input type="number" placeholder="ngày" id="day" />
-    <input type="number" placeholder="tháng" id="month" />
-    <input type="number" placeholder="năm" id="year" />
-    <div style="margin-top: 10px">
-      <button onclick="tomorrow()">Ngày tiếp theo</button>
-      <button onclick="yesterday()">Ngày hôm trước</button>
+    <p>* OUTPUT: Thứ tự tăng dần</p>
+    <hr />
+    <input type="text" placeholder="Nhập số nguyên" id="number1" />
+    <input type="text" placeholder="Nhập số nguyên" id="number2" />
+    <input type="text" placeholder="Nhập số nguyên" id="number3" />
+    <div>
+      <button onclick="arrange()">Kết Quả</button>
     </div>
-    <div id="click"></div>
+    <div id="check"></div>
     <script src="./main.js"></script>
   </body>
 </html>
